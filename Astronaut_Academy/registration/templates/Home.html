@@ -1,24 +1,29 @@
+<!DOCTYPE html>
+ {% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Home Page</title>
+   
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
 </head>
 <body>
-    'this is home'
-    Bringing together the world’s foremost experts in the disciplines of astronautics on a regular basis to recognize the accomplishments of their peers,
-    to explore and discuss cutting-edge issues in space research and technology, 
-    and to provide direction and guidance in the non-military uses of space and the ongoing exploration of the solar system    
+    <div class="navbar">
+        <a href="{% url 'home' %}">Home</a>
+        <a href="{% url 'curriculum' %}">Curriculum</a>
+        <a href="{% url 'career' %}">Career</a>
+        <a href="{% url 'student' %}">Student Registration</a>
+        <a href="{% url 'trainer' %}">Trainer Registration</a>
+    </div>
 
-
-    <p>Back to <a href="/career">career</a></p>
-
-    <p>Back to <a href="/curriculum">curriculum</a></p>
-
-    <p>Back to <a href="/student">student</a></p>
-
-    <p>Back to <a href="/trainer">trainer</a></p>
-</body>
-</html>
+    <div class="container">
+        <h1>Welcome to Astronaut Academy</h1>
+        <p>
+            Bringing together the world’s foremost experts in the disciplines of astronautics on a regular basis to recognize the accomplishments of their peers,
+            to explore and discuss cutting-edge issues in space research and technology,
+            and to provide direction and guidance in the non-military uses of space and the ongoing exploration of the solar system.
+        </p>
+    </div>
 </body>
 </html>

@@ -1,11 +1,18 @@
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Trainer Registration Page</title>
 </head>
 <body>
-    'trainer'
-    
+    <h1>Trainer Registration Page</h1>
+    <form method="post" action="{% url 'trainer' %}">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Submit</button>
+    </form>
+
+    <p>Back to <a href="{% url 'home' %}">Home</a></p>
 </body>
 </html>

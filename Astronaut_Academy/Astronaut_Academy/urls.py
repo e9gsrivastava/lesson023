@@ -21,7 +21,7 @@ from registration import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("h/" ,views.index ,name='index'),
-    path("home/" ,views.home , name='home'),
+    path("" ,views.home , name='home'),
     path("career/" ,views.career , name='career'),
     path("student/" ,views.student , name='student'),
     path("trainer/" ,views.trainer , name='trainer'),
